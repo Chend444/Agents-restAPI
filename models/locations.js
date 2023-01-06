@@ -7,21 +7,22 @@ const sequelize = require('../util/database')({
     dialect: 'mysql'
 });
 
-const Agent = sequelize.define('agent', {
+const Locations = sequelize.define('locations', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    name: {
-        type: Sequelize.STRING,
+    latitude: {
+        type: Sequelize.FLOAT,
         allowNull: false
     },
-    email: {
-        type: Sequelize.STRING,
+    longitude: {
+        type: Sequelize.FLOAT,
         allowNull: false
     }
 });
 
-module.exports = Agent;
+
+module.exports = Locations;

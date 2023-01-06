@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // import the controllers
-const agentsController = require('./controllers/agents');
-const locationsController = require('./controllers/locations');
+const agentsController = require('./controllers/AgentController');
+const locationsController = require('./controllers/LocationController');
 
 // define routes for the agents controller
 app.get('/agents', agentsController.index);

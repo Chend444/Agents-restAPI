@@ -1,4 +1,4 @@
-const Agent = require('../models/agent');
+const Agent = require('../models/agents');
 
 exports.index = (req, res) => {
     Agent.findAll()
